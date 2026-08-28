@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/industry-06498ac4-3575-4321-8d85-a06b664ca41f/styles.css">
+<script src="_ds/industry-06498ac4-3575-4321-8d85-a06b664ca41f/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+<style>
+  html{scroll-behavior:smooth;background:#fff}
+  body{margin:0;background:#fff;color:#1d1f20}
+  a{color:#1d1f20;text-decoration:none}
+  a:hover{color:var(--nl-accent,#b0567f)}
+  ::selection{background:var(--nl-accent-tint,#f6e7ee)}
+  :focus-visible{outline:2px solid var(--nl-accent,#b0567f);outline-offset:2px}
+  .nl-frame{position:relative;border:1px solid rgba(29,31,32,.16)}
+  .nl-frame > .corner{color:var(--nl-accent,#b0567f)}
+  .nl-under{position:relative}
+  .nl-under::after{content:"";position:absolute;left:0;right:100%;bottom:-3px;height:1px;background:var(--nl-accent,#b0567f);transition:right .25s ease}
+  .nl-under:hover::after{right:0}
+  @keyframes nl-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+  .nl-caret{animation:nl-blink 1s steps(1,end) infinite}
+  @keyframes nl-slide-down{0%{transform:translateY(-100%);opacity:0}100%{transform:translateY(0);opacity:1}}
+  .nl-rotate-in{animation:nl-slide-down .5s cubic-bezier(.16,.84,.28,1) both}
+  @media (prefers-reduced-motion:reduce){.nl-rotate-in{animation:none}}
+  @keyframes nl-pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--nl-accent-2,#41591f) 55%,transparent)}70%{box-shadow:0 0 0 7px color-mix(in srgb,var(--nl-accent-2,#41591f) 0%,transparent)}100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--nl-accent-2,#41591f) 0%,transparent)}}
+  .nl-status-dot{animation:nl-pulse 2s ease-out infinite}
+  @media (max-width:640px){.nl-facts{grid-template-columns:1fr!important}}
+  .nl-scatter{position:relative;min-height:clamp(360px,39vw,540px);touch-action:pan-y}
+  .nl-scatter img{position:absolute;cursor:grab;transition:transform .4s cubic-bezier(.2,.7,.2,1),opacity .25s ease;user-select:none;-webkit-user-drag:none;mix-blend-mode:multiply}
+  .nl-scatter img:hover{opacity:.62}
+  .nl-scatter img.nl-dragging{transition:none;cursor:grabbing;z-index:6;opacity:1}
+  @media (prefers-reduced-motion:reduce){.nl-scatter img{transition:none}}
+  @media (max-width:760px){
+    .nl-scatter{min-height:0;display:flex;flex-wrap:wrap;align-items:center;gap:26px 34px;touch-action:auto}
+    .nl-scatter img{position:static!important;left:auto!important;top:auto!important;transform:none!important;cursor:default}
+  }
+  @keyframes nl-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .nl-ticker{animation:nl-marquee 42s linear infinite}
+  .nl-ticker:hover{animation-play-state:paused}
+  @media (prefers-reduced-motion:reduce){.nl-ticker{animation:none}}
+  @media (hover:hover) and (pointer:fine){
+    #nl-cursor{display:none}
+    #nl-cursor{position:fixed;top:0;left:0;width:14px;height:14px;border-radius:50%;background:#2c455d;pointer-events:none;z-index:9999;opacity:0;will-change:transform;transition:opacity .15s linear,width .15s ease,height .15s ease;transform:translate3d(-50%,-50%,0)}
+  }
+  @media (max-width:900px){
+    #top{grid-template-columns:1fr!important}
+    #top > div{border:0!important;padding-left:0!important;padding-right:0!important;min-height:0!important;align-items:stretch!important}
+    #top > div:nth-child(2){padding-top:28px!important;border-top:1px solid rgba(29,31,32,.14)!important;border-bottom:1px solid rgba(29,31,32,.14)!important}
+    #top > div:nth-child(3){padding-top:28px!important}
+  }
+</style>
+</helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#f6e7ee"></rect><rect x="60" y="60" width="80" height="80" fill="none" stroke="#b0567f" stroke-width="2"></rect><text x="100" y="115" text-anchor="middle" font-family="Barlow Condensed, sans-serif" font-size="44" font-weight="600" fill="#1d1f20">NL</text></svg></template>
+<div style="font-family:var(--font-body);background:#fff;color:#1d1f20">
+  
+
+  <nav style="position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px clamp(20px,4vw,56px);background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(29,31,32,.1)">
+    <a href="#top" style="font-family:var(--font-heading);font-weight:600;font-size:19px;letter-spacing:.06em;text-transform:uppercase">Natalie Lui</a>
+    <div style="display:flex;align-items:center;gap:clamp(16px,2.4vw,34px)">
+      <a class="nl-under" href="#work" style="font-size:13px;letter-spacing:.1em;text-transform:lowercase">work</a>
+      <a class="nl-under" href="work/index.html" style="font-size:13px;letter-spacing:.1em;text-transform:lowercase">projects</a>
+      <a class="nl-under" href="#services" style="font-size:13px;letter-spacing:.1em;text-transform:lowercase">services</a>
+      <a class="nl-under" href="#about" style="font-size:13px;letter-spacing:.1em;text-transform:lowercase">about</a>
+      <a class="nl-under" href="#contact" style="font-size:13px;letter-spacing:.1em;text-transform:lowercase">contact</a>
+      <a class="nl-frame" href="assets/Natalie_Lui_Resume.pdf" target="_blank" style="display:inline-flex;align-items:center;padding:9px 18px;font-size:12px;letter-spacing:.14em;text-transform:uppercase" style-hover="background:var(--nl-accent-tint,#f6e7ee)">Resume
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      </a>
+    </div>
+  </nav>
+
+  <header id="top" style="display:grid;grid-template-columns:minmax(340px,1fr) minmax(240px,25%);gap:0;padding:0 clamp(20px,4vw,56px) clamp(48px,7vw,96px);max-width:1600px;margin:0 auto">
+
+    <div style="display:flex;flex-direction:column;gap:clamp(18px,2vw,26px);order:2;padding:clamp(20px,3vw,40px) 0 24px clamp(20px,3vw,40px);border-left:1px solid rgba(29,31,32,.14)">
+      <div class="nl-frame" style="width:100%;aspect-ratio:1/1">
+        <img src="assets/hero-portrait.webp" alt="Natalie Lui" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <h2 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(19px,1.5vw,24px);line-height:1.15">nice to meet you</h2>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#5d5f60;text-wrap:pretty">brand strategist with an analyst's brain and a creator's instincts.</p>
+      </div>
+      <div class="nl-frame" style="display:flex;flex-direction:column">
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 14px;align-items:baseline;padding:14px 16px;border-bottom:1px solid rgba(29,31,32,.12)">
+          <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#98989b">Based</span>
+          <span style="font-size:13.5px;letter-spacing:.02em">📍 new york city</span>
+        </div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 14px;align-items:baseline;padding:14px 16px;border-bottom:1px solid rgba(29,31,32,.12)">
+          <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#98989b">Focus</span>
+          <span style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--nl-accent,#b0567f)">growth · brand · community · events · strategy</span>
+        </div>
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 14px;align-items:baseline;padding:14px 16px;border-bottom:1px solid rgba(29,31,32,.12)">
+          <span style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#98989b">Status</span>
+          <span style="display:flex;align-items:center;gap:8px;font-size:13.5px"><span class="nl-status-dot" style="width:8px;height:8px;border-radius:50%;background:var(--nl-accent-2,#41591f);flex:0 0 auto"></span>open to full-time, immediately</span>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 16px">
+          <span style="display:flex;align-items:center;gap:14px">
+            <a class="nl-under" href="https://linkedin.com/in/luinatalie/" target="_blank" style="font-size:13px">linkedin</a>
+            <a class="nl-under" href="mailto:natalievlui24@gmail.com" style="font-size:13px">email</a>
+            <a class="nl-under" href="#work" style="font-size:13px">instagram</a>
+          </span>
+          <span style="font-size:11px;letter-spacing:.14em;color:#98989b">© 2026</span>
+        </div>
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:clamp(30px,4vw,60px);order:1;padding:clamp(40px,6vw,88px) clamp(20px,3vw,48px) 24px 0;min-height:min(74vh,820px)">
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <h1 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(48px,7.4vw,116px);line-height:.9;letter-spacing:-.025em">hi! i'm natalie</h1>
+        <p style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(28px,4.4vw,72px);line-height:1.04;letter-spacing:-.02em;color:#9a9c9d">I'm a 26 yr old <span class="nl-rotate" style="display:inline-block;vertical-align:top;overflow:hidden;height:1.04em"><span class="nl-rotate-in" key="{{ phraseIndex }}" style="display:block;color:var(--nl-accent,#b0567f)">{{ phrase }}</span></span></p>
+      </div>
+      <div class="nl-facts" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(26px,3.2vw,44px) clamp(24px,3vw,48px);margin-top:auto">
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <h2 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(21px,1.9vw,30px);line-height:1.1"><span style="color:var(--nl-accent,#b0567f)">[01]</span>&nbsp; founder — for the plot nyc</h2>
+          <p style="margin:0;display:flex;align-items:flex-start;gap:12px;font-size:clamp(15px,1.15vw,18px);line-height:1.55;color:#5d5f60"><img src="assets/ftp-logo-x.png" alt="For The Plot" style="width:26px;height:26px;object-fit:contain;flex:0 0 auto;margin-top:2px"><span>6.6k community · 50+ events · 515-person anniversary at $15.9k profit</span></p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <h2 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(21px,1.9vw,30px);line-height:1.1"><span style="color:var(--nl-accent,#b0567f)">[02]</span>&nbsp; creator (200k+ followers)</h2>
+          <p style="margin:0;display:flex;align-items:flex-start;gap:12px;font-size:clamp(15px,1.15vw,18px);line-height:1.55;color:#5d5f60"><img src="assets/tiktok.png" alt="TikTok" style="width:26px;height:26px;object-fit:contain;flex:0 0 auto;margin-top:2px"><span>4.5m lifetime likes · 250+ videos · 40+ brand partnerships in 2026</span></p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <h2 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(21px,1.9vw,30px);line-height:1.1"><span style="color:var(--nl-accent,#b0567f)">[03]</span>&nbsp; prev. business intelligence</h2>
+          <p style="margin:0;font-size:clamp(15px,1.15vw,18px);line-height:1.55;color:#5d5f60">jefferies, fixed income — 15+ power bi dashboards for 50+ stakeholders</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <h2 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(21px,1.9vw,30px);line-height:1.1"><span style="color:var(--nl-accent,#b0567f)">[04]</span>&nbsp; finance &amp; marketing grad</h2>
+          <div style="display:flex;flex-direction:column;gap:10px;font-size:clamp(15px,1.15vw,18px);line-height:1.55;color:#5d5f60">
+            <p style="margin:0;display:flex;align-items:center;gap:12px"><img src="assets/rowan-owl.png" alt="Rowan University" style="width:26px;height:26px;object-fit:contain;flex:0 0 auto">rowan university, cum laude</p>
+            <p style="margin:0;display:flex;align-items:center;gap:12px"><img src="assets/designlab.png" alt="DesignLab" style="width:26px;height:26px;object-fit:contain;flex:0 0 auto">ux/ui certification, designlab 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <section style="border-block:1px solid rgba(29,31,32,.1);background:#fff;overflow:hidden">
+    <div class="nl-ticker" style="display:flex;width:max-content">
+      <div class="nl-ticker-run" style="display:flex;align-items:center;gap:0;flex:0 0 auto;padding:0">
+        <span style="display:flex;align-items:center;gap:8px;padding:11px 22px;border-right:1px solid rgba(29,31,32,.1)"><span style="font-family:var(--font-heading);font-size:15px;letter-spacing:.04em">6.6K</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6d6f70">community</span><span style="font-size:11px;color:var(--nl-accent-2,#41591f)">▲</span></span>
+        <span style="display:flex;align-items:center;gap:8px;padding:11px 22px;border-right:1px solid rgba(29,31,32,.1)"><span style="font-family:var(--font-heading);font-size:15px;letter-spacing:.04em">200K</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6d6f70">tiktok followers</span><span style="font-size:11px;color:var(--nl-accent-2,#41591f)">▲</span></span>
+        <span style="display:flex;align-items:center;gap:8px;padding:11px 22px;border-right:1px solid rgba(29,31,32,.1)"><span style="font-family:var(--font-heading);font-size:15px;letter-spacing:.04em">4.5M</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6d6f70">lifetime likes</span><span style="font-size:11px;color:var(--nl-accent-2,#41591f)">▲</span></span>
+        <span style="display:flex;align-items:center;gap:8px;padding:11px 22px;border-right:1px solid rgba(29,31,32,.1)"><span style="font-family:var(--font-heading);font-size:15px;letter-spacing:.04em">50+</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6d6f70">events</span></span>
+        <span style="display:flex;align-items:center;gap:8px;padding:11px 22px;border-right:1px solid rgba(29,31,32,.1)"><span style="font-family:var(--font-heading);font-size:15px;letter-spacing:.04em">515</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6d6f70">anniversary guests</span><span style="font-size:11px;color:var(--nl-accent-2,#41591f)">▲</span></span>
+        <span style="display:flex;align-items:center;gap:8px;padding:11px 22px;border-right:1px solid rgba(29,31,32,.1)"><span style="font-family:var(--font-heading);font-size:15px;letter-spacing:.04em;color:var(--nl-accent,#b0567f)">$15.9K</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6d6f70">event profit</span><span style="font-size:11px;color:var(--nl-accent-2,#41591f)">▲</span></span>
+        <span style="display:flex;align-items:center;gap:8px;padding:11px 22px;border-right:1px solid rgba(29,31,32,.1)"><span style="font-family:var(--font-heading);font-size:15px;letter-spacing:.04em">65</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6d6f70">partner venues</span></span>
+        <span style="display:flex;align-items:center;gap:8px;padding:11px 22px;border-right:1px solid rgba(29,31,32,.1)"><span style="font-family:var(--font-heading);font-size:15px;letter-spacing:.04em">45</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6d6f70">sponsors</span></span>
+      </div>
+      <div class="nl-ticker-run" aria-hidden="true" style="display:flex;align-items:center;gap:0;flex:0 0 auto;padding:0">
+        <span style="display:flex;align-items:center;gap:8px;padding:11px 22px;border-right:1px solid rgba(29,31,32,.1)"><span style="font-family:var(--font-heading);font-size:15px;letter-spacing:.04em">6.6K</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6d6f70">community</span><span style="font-size:11px;color:var(--nl-accent-2,#41591f)">▲</span></span>
+        <span style="display:flex;align-items:center;gap:8px;padding:11px 22px;border-right:1px solid rgba(29,31,32,.1)"><span style="font-family:var(--font-heading);font-size:15px;letter-spacing:.04em">200K</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6d6f70">tiktok followers</span><span style="font-size:11px;color:var(--nl-accent-2,#41591f)">▲</span></span>
+        <span style="display:flex;align-items:center;gap:8px;padding:11px 22px;border-right:1px solid rgba(29,31,32,.1)"><span style="font-family:var(--font-heading);font-size:15px;letter-spacing:.04em">4.5M</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6d6f70">lifetime likes</span><span style="font-size:11px;color:var(--nl-accent-2,#41591f)">▲</span></span>
+        <span style="display:flex;align-items:center;gap:8px;padding:11px 22px;border-right:1px solid rgba(29,31,32,.1)"><span style="font-family:var(--font-heading);font-size:15px;letter-spacing:.04em">50+</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6d6f70">events</span></span>
+        <span style="display:flex;align-items:center;gap:8px;padding:11px 22px;border-right:1px solid rgba(29,31,32,.1)"><span style="font-family:var(--font-heading);font-size:15px;letter-spacing:.04em">515</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6d6f70">anniversary guests</span><span style="font-size:11px;color:var(--nl-accent-2,#41591f)">▲</span></span>
+        <span style="display:flex;align-items:center;gap:8px;padding:11px 22px;border-right:1px solid rgba(29,31,32,.1)"><span style="font-family:var(--font-heading);font-size:15px;letter-spacing:.04em;color:var(--nl-accent,#b0567f)">$15.9K</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6d6f70">event profit</span><span style="font-size:11px;color:var(--nl-accent-2,#41591f)">▲</span></span>
+        <span style="display:flex;align-items:center;gap:8px;padding:11px 22px;border-right:1px solid rgba(29,31,32,.1)"><span style="font-family:var(--font-heading);font-size:15px;letter-spacing:.04em">65</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6d6f70">partner venues</span></span>
+        <span style="display:flex;align-items:center;gap:8px;padding:11px 22px;border-right:1px solid rgba(29,31,32,.1)"><span style="font-family:var(--font-heading);font-size:15px;letter-spacing:.04em">45</span><span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6d6f70">sponsors</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="padding:clamp(56px,7vw,104px) clamp(20px,4vw,56px);max-width:1500px;margin:0 auto">
+    <div style="display:flex;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:clamp(32px,5vw,60px)">
+      <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--nl-accent,#b0567f)">01 — Selected work</span>
+      <h2 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(34px,5vw,68px);line-height:1;letter-spacing:-.01em;text-transform:uppercase">Two things I built from zero</h2>
+    </div>
+
+    <article style="display:grid;gap:clamp(28px,4vw,52px);padding-bottom:clamp(44px,6vw,84px);margin-bottom:clamp(44px,6vw,84px);border-bottom:1px solid rgba(29,31,32,.12)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,3vw,44px);align-items:start">
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;background:var(--nl-accent-tint,#f6e7ee);color:var(--nl-accent-deep,#7c3557)">Founder</span>
+            <span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(29,31,32,.16);color:#6d6f70">May 2024 — present</span>
+          </div>
+          <h3 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(30px,4vw,52px);line-height:1;letter-spacing:-.01em;text-transform:uppercase">For The Plot<br>NYC Social Club</h3>
+          <p style="margin:0;font-size:17px;line-height:1.6;color:#3c3e3f;max-width:46ch;text-wrap:pretty">What started as a breakfast meetup became a system for helping young professionals in New York form real connections through shared experiences, rituals and recurring programming. I run the strategy, the content, the partnerships and the door.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:rgba(29,31,32,.14);border:1px solid rgba(29,31,32,.14)">
+          <div style="background:#fff;padding:20px 18px"><div style="font-family:var(--font-heading);font-size:40px;line-height:1">6.6K</div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6d6f70;margin-top:6px">Instagram community, doubled YoY organically</div></div>
+          <div style="background:#fff;padding:20px 18px"><div style="font-family:var(--font-heading);font-size:40px;line-height:1">515</div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6d6f70;margin-top:6px">Attendees at the anniversary event</div></div>
+          <div style="background:#fff;padding:20px 18px"><div style="font-family:var(--font-heading);font-size:40px;line-height:1;color:var(--nl-accent,#b0567f)">$15.9K</div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6d6f70;margin-top:6px">Profit from that single night</div></div>
+          <div style="background:#fff;padding:20px 18px"><div style="font-family:var(--font-heading);font-size:40px;line-height:1">50+</div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6d6f70;margin-top:6px">Events programmed end to end</div></div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:clamp(24px,3vw,44px)">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #B0567F">Why I started it</span>
+          <p style="margin:0;font-size:15.5px;line-height:1.65;color:#3c3e3f;text-wrap:pretty">Everyone I knew had moved to New York and still felt like a stranger in it. I wanted to join a community that didn't have one specific hobby or niche. Meeting people online was easy; showing up somewhere was the hard part. I wanted a brand that removed the friction of the first hello and that plan already exists, all you have to do is come.</p>
+        <div id="nl-cursor" style="position: absolute; left: 138px; top: 18px"></div></div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #B0567F">What I did</span>
+          <p style="margin:0;font-size:15.5px;line-height:1.65;color:#3c3e3f;text-wrap:pretty">Built the brand voice and visual identity, then ran the whole loop: a content calendar that drives signups, event programming from venue and vendors to day-of logistics, and outreach to partners. Every flyer, deck and story frame is mine. Attendance sheets and Instagram metrics decide what we program next.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #B0567F">What I'd do differently</span>
+          <p style="margin:0;font-size:15.5px;line-height:1.65;color:#3c3e3f;text-wrap:pretty">I priced early events on instinct instead of on cost, and learned the hard way that a sold-out room can still lose money. Now every event starts as a model. I'd also have captured emails from night one instead of leaning on the algorithm to reach the same people twice.</p>
+        </div>
+      </div>
+
+      <div style="display:grid;gap:1px;background:rgba(29,31,32,.14);border:1px solid rgba(29,31,32,.14);grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+        <div style="background:#fff;display:flex;flex-direction:column;gap:12px;padding:clamp(20px,2.2vw,30px)">
+          <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--nl-accent,#b0567f)">[01] &nbsp;Visuals</span>
+          <h4 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:1.05;text-transform:uppercase">A look you can spot mid-scroll</h4>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#3c3e3f;text-wrap:pretty">I built a consistent visual system around a defined palette, two typefaces, film-grain photography, and a corkboard-inspired collage style, then carried it across every flyer, invite, and recap post.</p>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#3c3e3f;text-wrap:pretty">The monthly events board became a signature format: one recognizable image that holds the full calendar and gives the community something easy to save and share. Reusable templates also cut production time to about twenty minutes per event while keeping every asset unmistakably For The Plot.</p>
+        </div>
+        <div style="background:#fff;display:flex;flex-direction:column;gap:12px;padding:clamp(20px,2.2vw,30px)">
+          <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--nl-accent,#b0567f)">[02] &nbsp;Taglines</span>
+          <h4 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:1.05;text-transform:uppercase">Copy that lowers the stakes</h4>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#3c3e3f;text-wrap:pretty">The name itself says what we are about, come for the story and make real life connections. Every event gets a line written to make showing up alone feel normal. It should feel like an invitation or a small dare, never a pitch. I write for the person screenshotting it to send to a friend, so the tagline has to make sense with no context. Lines that get replies become recurring formats, which are the ones that don't get cut.</p>
+        </div>
+        <div style="background:#fff;display:flex;flex-direction:column;gap:12px;padding:clamp(20px,2.2vw,30px)">
+          <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--nl-accent,#b0567f)">[03] &nbsp;Partnerships</span>
+          <h4 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:1.05;text-transform:uppercase">Trading audience for room</h4>
+          <p style="margin:0;font-size:15px;line-height:1.65;color:#3c3e3f;text-wrap:pretty">I pitch venues on the weeknights they want to fill and brands on a room full of the exact people they want to reach. They get an engaged audience, content they can repost, and their product in people's hands. I run the partnership end to end, from outreach and the pitch deck to terms, day of activation, and a recap with attendance and reach. That way, the next conversation starts with proof. Most partners come back for a second event.</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+        <div class="nl-frame" style="aspect-ratio:4/3;overflow:hidden">
+          <div style="display:flex;width:100%;height:100%;transition:transform .45s cubic-bezier(.4,0,.2,1);transform:{{ nightShift }};touch-action:pan-y" onTouchStart="{{ nightSwipeStart }}" onTouchEnd="{{ nightSwipeEnd }}">
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden"><img src="assets/opt/night-1-x.jpg" alt="Anniversary night — wide room shot" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden"><img src="assets/opt/night-2-x.jpg" alt="Guests with sponsor product" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden"><img src="assets/opt/night-3-x.jpg" alt="Attendees with For The Plot prompt cards" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden"><img src="assets/opt/night-4-x.jpg" alt="Guest with sponsor tote bag" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+            <div style="position:relative;flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden;background:#f4f4f5;display:flex;align-items:center;justify-content:center;padding:0 0 46px">
+              <video id="nl-night-video" src="assets/anniversary.mp4" playsinline preload="auto" style="max-width:100%;max-height:100%;width:auto;height:100%;object-fit:contain;background:#f4f4f5"></video>
+            </div>
+          </div>
+          <div style="position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;background:linear-gradient(rgba(255,255,255,0),rgba(255,255,255,.82))">
+            <button type="button" onClick="{{ nightPrev }}" style="width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(29,31,32,.24);background:#fff;color:#1d1f20;font-size:15px;cursor:pointer" style-hover="background:var(--nl-accent-tint,#f6e7ee)">‹</button>
+            <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#3c3e3f">Largest event · {{ nightLabel }}</span>
+            <button type="button" onClick="{{ nightNext }}" style="width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(29,31,32,.24);background:#fff;color:#1d1f20;font-size:15px;cursor:pointer" style-hover="background:var(--nl-accent-tint,#f6e7ee)">›</button>
+          </div>
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </div>
+        <div class="nl-frame" style="aspect-ratio:4/3;overflow:hidden">
+          <div style="display:flex;width:100%;height:100%;transition:transform .45s cubic-bezier(.4,0,.2,1);transform:{{ candidShift }};touch-action:pan-y" onTouchStart="{{ candidSwipeStart }}" onTouchEnd="{{ candidSwipeEnd }}">
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden"><img src="assets/opt/candid-1-x.jpg" alt="Attendees at a holiday mixer" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden"><img src="assets/opt/candid-2.jpg" alt="Group after a pilates class" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden"><img src="assets/opt/candid-3-x.jpg" alt="Breakfast club members with gift bags" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden"><img src="assets/opt/candid-4-x.jpg" alt="Matcha meetup outside Moko" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden"><img src="assets/opt/candid-5-x.jpg" alt="Flower bouquet event outside Butterdose" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden"><img src="assets/opt/candid-6-x.jpg" alt="Large group meetup on the waterfront" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden"><img src="assets/opt/candid-7-x.jpg" alt="Craft workshop in a sunlit studio" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden"><img src="assets/opt/candid-8-x.jpg" alt="Book club gathering" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+          </div>
+          <div style="position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;background:linear-gradient(rgba(255,255,255,0),rgba(255,255,255,.82))">
+            <button type="button" onClick="{{ candidPrev }}" style="width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(29,31,32,.24);background:#fff;color:#1d1f20;font-size:15px;cursor:pointer" style-hover="background:var(--nl-accent-tint,#f6e7ee)">‹</button>
+            <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#3c3e3f">Event highlights · {{ candidLabel }}</span>
+            <button type="button" onClick="{{ candidNext }}" style="width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(29,31,32,.24);background:#fff;color:#1d1f20;font-size:15px;cursor:pointer" style-hover="background:var(--nl-accent-tint,#f6e7ee)">›</button>
+          </div>
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </div>
+        <div class="nl-frame" style="aspect-ratio:4/3;overflow:hidden">
+          <div style="display:flex;width:100%;height:100%;transition:transform .45s cubic-bezier(.4,0,.2,1);transform:{{ canvaShift }};touch-action:pan-y" onTouchStart="{{ canvaSwipeStart }}" onTouchEnd="{{ canvaSwipeEnd }}">
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden;background:#f4f4f5;display:flex;align-items:center;justify-content:center;padding:0 0 40px"><img src="assets/opt/canva-1-x.jpg" alt="Bouquet swap invitation" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden;background:#f4f4f5;display:flex;align-items:center;justify-content:center;padding:0 0 40px"><img src="assets/opt/canva-2-x.jpg" alt="Friend speed dating happy hour flyer" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden;background:#f4f4f5;display:flex;align-items:center;justify-content:center;padding:0 0 40px"><img src="assets/opt/canva-3-x.jpg" alt="Polaroid collage recap post" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden;background:#f4f4f5;display:flex;align-items:center;justify-content:center;padding:0 0 40px"><img src="assets/opt/canva-4-x.jpg" alt="October events corkboard" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden;background:#f4f4f5;display:flex;align-items:center;justify-content:center;padding:0 0 40px"><img src="assets/opt/canva-5-x.jpg" alt="September events corkboard" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden;background:#f4f4f5;display:flex;align-items:center;justify-content:center;padding:0 0 40px"><img src="assets/opt/canva-6-x.jpg" alt="Denim party recap post" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden;background:#f4f4f5;display:flex;align-items:center;justify-content:center;padding:0 0 40px"><img src="assets/opt/canva-7-x.jpg" alt="August events calendar post" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden;background:#f4f4f5;display:flex;align-items:center;justify-content:center;padding:0 0 40px"><img src="assets/opt/canva-8-x.jpg" alt="Rooftop summer social flyer" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div>
+            <div style="flex:0 0 100%;width:100%;min-width:0;height:100%;overflow:hidden;background:#f4f4f5;display:flex;align-items:center;justify-content:center;padding:0 0 40px"><img src="assets/opt/canva-9-x.jpg" alt="Save the date announcement" style="max-width:100%;max-height:100%;object-fit:contain;display:block"></div>
+          </div>
+          <div style="position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;background:linear-gradient(rgba(255,255,255,0),rgba(255,255,255,.82))">
+            <button type="button" onClick="{{ canvaPrev }}" style="width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(29,31,32,.24);background:#fff;color:#1d1f20;font-size:15px;cursor:pointer" style-hover="background:var(--nl-accent-tint,#f6e7ee)">‹</button>
+            <span style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#3c3e3f">Canva assets · {{ canvaLabel }}</span>
+            <button type="button" onClick="{{ canvaNext }}" style="width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(29,31,32,.24);background:#fff;color:#1d1f20;font-size:15px;cursor:pointer" style-hover="background:var(--nl-accent-tint,#f6e7ee)">›</button>
+          </div>
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(24px,3vw,44px)">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--nl-accent-deep,#7c3557)">Partners &amp; sponsors</span>
+          <p style="margin:0;font-size:15px;line-height:1.6;color:#3c3e3f;max-width:60ch">65+ partner businesses hosting events, 45 brands supporting with product, giveaways and co-promotion, and $1.2K in funding from a social-connection app startup — where I was the local point of contact for community growth and app adoption in New York.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#6d6f70">Where we've hosted</span>
+          <div style="position:relative;width:100%;aspect-ratio:4/3;min-height:200px;border:1px solid rgba(29,31,32,.16)">
+            <iframe src="nyc-map.html" title="Map of For The Plot venues in New York City" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article style="display:grid;gap:clamp(28px,4vw,52px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,3vw,44px);align-items:start">
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;background:var(--nl-accent-2-tint,#e9eede);color:var(--nl-accent-2,#41591f)">Creator</span>
+            <span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(29,31,32,.16);color:#6d6f70">Nov 2020 — present</span>
+          </div>
+          <h3 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(30px,4vw,52px);line-height:1;letter-spacing:-.01em;text-transform:uppercase">Lifestyle content<br>on TikTok</h3>
+          <p style="margin:0;font-size:17px;line-height:1.6;color:#3c3e3f;max-width:46ch;text-wrap:pretty">Five years of short-form, self-produced: script, film, edit, publish, read the numbers, do it better. It's where I learned what makes a person stop scrolling.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:rgba(29,31,32,.14);border:1px solid rgba(29,31,32,.14)">
+          <div style="background:#fff;padding:20px 18px"><div style="font-family:var(--font-heading);font-size:40px;line-height:1">200K</div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6d6f70;margin-top:6px">Followers, no paid spend</div></div>
+          <div style="background:#fff;padding:20px 18px"><div style="font-family:var(--font-heading);font-size:40px;line-height:1;color:var(--nl-accent-2,#41591f)">4.5M</div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6d6f70;margin-top:6px">Lifetime likes</div></div>
+          <div style="background:#fff;padding:20px 18px"><div style="font-family:var(--font-heading);font-size:40px;line-height:1">250+</div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6d6f70;margin-top:6px">Videos written, shot and edited</div></div>
+          <div style="background:#fff;padding:20px 18px"><div style="font-family:var(--font-heading);font-size:40px;line-height:1">40+</div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6d6f70;margin-top:6px">Brand partnerships since Jan 2026</div></div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:clamp(24px,3vw,44px)">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--nl-accent-2,#41591f)">Why I started it</span>
+          <p style="margin:0;font-size:15.5px;line-height:1.65;color:#3c3e3f;text-wrap:pretty">It started as a place to document living with my family and cats during quarantine in 2020. It turned into a real audience faster than I expected. Staying on it taught me the thing no course does, which is how attention is earned in the first two seconds, over and over, and nothing you did last month carries you.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--nl-accent-2,#41591f)">What I do</span>
+          <p style="margin:0;font-size:15.5px;line-height:1.65;color:#3c3e3f;text-wrap:pretty">I come up with the idea, write it, film it and cut it in CapCut, where the pacing and the sound do most of the work. Then I repost it to Reels so it reaches more people. I also write my own media kits and negotiate my own contracts with lifestyle and hospitality brands.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--nl-accent-2,#41591f)">What I'd do differently</span>
+          <p style="margin:0;font-size:15.5px;line-height:1.65;color:#3c3e3f;text-wrap:pretty">I chased trends before I had a format of my own. Looking back, the videos that actually worked were the ones only I could have made. I'd pick two formats I could repeat and let the trends fit into those instead of the other way around. I'd also move my audience somewhere I actually own a lot sooner.</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:rgba(29,31,32,.14);border:1px solid rgba(29,31,32,.14)">
+        <div style="background:#fff;display:flex;flex-direction:column;justify-content:center;gap:10px;padding:clamp(22px,2.4vw,32px)">
+          <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--nl-accent-2,#41591f)">Engagement rate</span>
+          <div style="font-family:var(--font-heading);font-weight:600;font-size:clamp(52px,6vw,84px);line-height:.9;color:var(--nl-accent-2,#41591f)">4.8%</div>
+          <p style="margin:0;font-size:13.5px;line-height:1.55;color:#6d6f70;text-wrap:pretty">Likes, comments and shares against post views — against a 4–5% typical range for the platform.</p>
+        </div>
+        <div style="background:#fff;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:rgba(29,31,32,.14)">
+          <div style="background:#fff;padding:18px 16px"><div style="font-family:var(--font-heading);font-size:34px;line-height:1">1.9M</div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6d6f70;margin-top:6px">Post views</div></div>
+          <div style="background:#fff;padding:18px 16px"><div style="font-family:var(--font-heading);font-size:34px;line-height:1">81.7K</div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6d6f70;margin-top:6px">Likes</div></div>
+          <div style="background:#fff;padding:18px 16px"><div style="font-family:var(--font-heading);font-size:34px;line-height:1">9.6K</div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6d6f70;margin-top:6px">Shares</div></div>
+          <div style="background:#fff;padding:18px 16px"><div style="font-family:var(--font-heading);font-size:34px;line-height:1">15.4K</div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6d6f70;margin-top:6px">Profile views</div></div>
+          <div style="background:#fff;padding:18px 16px"><div style="font-family:var(--font-heading);font-size:34px;line-height:1">760</div><div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6d6f70;margin-top:6px">Comments</div></div>
+          <div style="background:#fff;padding:18px 16px;display:flex;flex-direction:column;justify-content:flex-end"><div style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#98989b;line-height:1.5">Trailing 365 days<br>TikTok Studio</div></div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+        <div class="nl-frame" style="aspect-ratio:3/4;overflow:hidden;background:#f4f4f5;display:flex;align-items:center;justify-content:center"><img src="assets/opt/tt-key-metrics-x.jpg" alt="TikTok key metrics, Aug 2025 to Aug 2026: 1.9M post views, 15.4K profile views, 81.7K likes, 760 comments, 9.6K shares" style="max-width:100%;max-height:100%;object-fit:contain;display:block"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></div>
+        <div class="nl-frame" style="aspect-ratio:3/4;overflow:hidden;background:#0d0e0f"><img src="assets/opt/tt-dinner-spot-x.jpg" alt="Video still: your next dinner date spot, NYC restaurant with sculptural lighting" style="width:100%;height:100%;object-fit:cover;display:block"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></div>
+        <div class="nl-frame" style="aspect-ratio:3/4;overflow:hidden;background:#0d0e0f"><img src="assets/opt/tt-beauty-haul-x.jpg" alt="Video still: POV you want to try high-end beauty without paying full price" style="width:100%;height:100%;object-fit:cover;display:block"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></div>
+      </div>
+
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:clamp(8px,1.5vw,18px);border-top:1px solid rgba(29,31,32,.12)">
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#6d6f70;max-width:52ch;text-wrap:pretty">Four campaign projects — three speculative, one real — with the strategy and the reasoning behind every design choice.</p>
+        <a class="nl-frame" href="work/index.html" style="display:inline-flex;align-items:center;padding:14px 26px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;background:var(--nl-accent,#b0567f);color:#fff;border-color:var(--nl-accent,#b0567f)" style-hover="background:#9a4a6e">View more work →<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
+      </div>
+    </article>
+  </section>
+
+  <sc-if value="{{ showReel }}" hint-placeholder-val="{{ true }}">
+  <section id="reel" style="padding:clamp(52px,6vw,92px) clamp(20px,4vw,56px);border-top:1px solid rgba(29,31,32,.1)">
+    <div style="max-width:1500px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(22px,3vw,38px)">
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap">
+        <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--nl-accent,#b0567f)">02 — Content reel</span>
+        <h2 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(28px,3.6vw,48px);line-height:1;text-transform:uppercase">A sample of what I make</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px">
+        <div class="nl-frame" style="aspect-ratio:9/16;overflow:hidden;background:#0d0e0f"><video class="nl-reel" src="assets/reel/reel-1.mp4" preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></div>
+        <div class="nl-frame" style="aspect-ratio:9/16;overflow:hidden;background:#0d0e0f"><video class="nl-reel" src="assets/reel/reel-2.mp4" preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></div>
+        <div class="nl-frame" style="aspect-ratio:9/16;overflow:hidden;background:#0d0e0f"><video class="nl-reel" src="assets/reel/reel-3.mp4" preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></div>
+        <div class="nl-frame" style="aspect-ratio:9/16;overflow:hidden;background:#0d0e0f"><video class="nl-reel" src="assets/reel/reel-4.mp4" preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></div>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section id="services" style="padding:clamp(56px,7vw,104px) clamp(20px,4vw,56px);border-top:1px solid rgba(29,31,32,.1)">
+    <div style="max-width:1500px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(26px,4vw,48px)">
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap">
+        <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--nl-accent,#b0567f)">03 — How I can help</span>
+        <h2 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(34px,5vw,68px);line-height:1;letter-spacing:-.01em;text-transform:uppercase">What I want to be hired to do</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:20px">
+        <div class="nl-frame" style="padding:26px 24px;display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:var(--font-heading);font-size:13px;letter-spacing:.16em;color:var(--nl-accent,#b0567f)">i.</span>
+          <h3 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:1.1">Community building &amp; event programming</h3>
+          <p style="margin:0;font-size:14.5px;line-height:1.6;color:#5d5f60">From the first twenty people to a 515-person room: developing the format, cadence, run of show, and follow-up that gives people a reason to come back.</p>
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </div>
+        <div class="nl-frame" style="padding:26px 24px;display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:var(--font-heading);font-size:13px;letter-spacing:.16em;color:var(--nl-accent,#b0567f)">ii.</span>
+          <h3 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:1.1">Brand partnerships &amp; sponsorships</h3>
+          <p style="margin:0;font-size:14.5px;line-height:1.6;color:#5d5f60">Sourcing, pitching, negotiating, and delivering partnerships. I've worked from both sides of the relationship, building partnerships for my own community and working with brands as a creator.</p>
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </div>
+        <div class="nl-frame" style="padding:26px 24px;display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:var(--font-heading);font-size:13px;letter-spacing:.16em;color:var(--nl-accent,#b0567f)">iii.</span>
+          <h3 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:1.1">Social media management</h3>
+          <p style="margin:0;font-size:14.5px;line-height:1.6;color:#5d5f60">Voice, content calendars, publishing, and reporting across TikTok and Instagram, with the analytics habit to understand why something worked and what to do next.</p>
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </div>
+        <div class="nl-frame" style="padding:26px 24px;display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:var(--font-heading);font-size:13px;letter-spacing:.16em;color:var(--nl-accent,#b0567f)">iv.</span>
+          <h3 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:1.1">Campaign creative</h3>
+          <p style="margin:0;font-size:14.5px;line-height:1.6;color:#5d5f60">Flyers, sponsorship decks, promotional assets, and short-form edits. I make them myself, quickly and with a consistent point of view.</p>
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </div>
+        <div class="nl-frame" style="padding:26px 24px;display:flex;flex-direction:column;gap:10px">
+          <span style="font-family:var(--font-heading);font-size:13px;letter-spacing:.16em;color:var(--nl-accent,#b0567f)">v.</span>
+          <h3 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:1.1">Influencer &amp; creator collaborations</h3>
+          <p style="margin:0;font-size:14.5px;line-height:1.6;color:#5d5f60">I've been the creator receiving the brief, so I know what makes one clear, useful, and actually exciting to create. I also know what a fair partnership looks like from both sides.</p>
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ showPartners }}" hint-placeholder-val="{{ true }}">
+  <section id="partners" style="padding:clamp(52px,6vw,92px) clamp(20px,4vw,56px);border-top:1px solid rgba(29,31,32,.1)">
+    <div style="max-width:1500px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(20px,3vw,34px)">
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap">
+        <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--nl-accent,#b0567f)">04 — Partners</span>
+        <h2 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(28px,3.6vw,48px);line-height:1;text-transform:uppercase">Brands and venues I've worked with</h2>
+      </div>
+      <div id="nl-logo-scatter" class="nl-scatter">
+        <img src="assets/logos/innisfree.png" alt="innisfree" style="left:2%;top:2%;height:clamp(15px,1.7vw,23px);width:auto;transform:translate(calc(var(--mx,0px) * 1.7 + var(--dx,0px) + var(--hx,0px)),calc(var(--my,0px) * 1.7 + var(--dy,0px) + var(--hy,0px))) rotate(-7deg) rotate(var(--hr,0deg))">
+        <img src="assets/logos/hoka-x.png" alt="HOKA" style="left:29%;top:9%;height:clamp(28px,3vw,42px);width:auto;transform:translate(calc(var(--mx,0px) * 0.7 + var(--dx,0px) + var(--hx,0px)),calc(var(--my,0px) * 0.7 + var(--dy,0px) + var(--hy,0px))) rotate(5deg) rotate(var(--hr,0deg))">
+        <img src="assets/logos/celsius.png" alt="Celsius" style="left:56%;top:1%;height:clamp(30px,3.3vw,46px);width:auto;transform:translate(calc(var(--mx,0px) * 1.3 + var(--dx,0px) + var(--hx,0px)),calc(var(--my,0px) * 1.3 + var(--dy,0px) + var(--hy,0px))) rotate(-4deg) rotate(var(--hr,0deg))">
+        <img src="assets/logos/dermalogica.png" alt="Dermalogica" style="left:80%;top:12%;height:clamp(14px,1.5vw,20px);width:auto;transform:translate(calc(var(--mx,0px) * 0.5 + var(--dx,0px) + var(--hx,0px)),calc(var(--my,0px) * 0.5 + var(--dy,0px) + var(--hy,0px))) rotate(8deg) rotate(var(--hr,0deg))">
+        <img src="assets/logos/cosrx.png" alt="COSRX" style="left:9%;top:26%;height:clamp(22px,2.3vw,32px);width:auto;transform:translate(calc(var(--mx,0px) * 1 + var(--dx,0px) + var(--hx,0px)),calc(var(--my,0px) * 1 + var(--dy,0px) + var(--hy,0px))) rotate(6deg) rotate(var(--hr,0deg))">
+        <img src="assets/logos/skin1004-trim.png" alt="SKIN1004" style="left:34%;top:30%;height:clamp(14px,1.5vw,20px);width:auto;transform:translate(calc(var(--mx,0px) * 1.9 + var(--dx,0px) + var(--hx,0px)),calc(var(--my,0px) * 1.9 + var(--dy,0px) + var(--hy,0px))) rotate(-5.5deg) rotate(var(--hr,0deg))">
+        <img src="assets/logos/medicube.png" alt="medicube" style="left:64%;top:22%;height:clamp(20px,2.1vw,30px);width:auto;transform:translate(calc(var(--mx,0px) * 0.6 + var(--dx,0px) + var(--hx,0px)),calc(var(--my,0px) * 0.6 + var(--dy,0px) + var(--hy,0px))) rotate(7.5deg) rotate(var(--hr,0deg))">
+        <img src="assets/logos/torriden.png" alt="Torriden" style="left:82%;top:33%;height:clamp(20px,2.1vw,30px);width:auto;transform:translate(calc(var(--mx,0px) * 1.4 + var(--dx,0px) + var(--hx,0px)),calc(var(--my,0px) * 1.4 + var(--dy,0px) + var(--hy,0px))) rotate(-6.5deg) rotate(var(--hr,0deg))">
+        <img src="assets/logos/mixsoon.png" alt="mixsoon" style="left:4%;top:50%;height:clamp(22px,2.3vw,32px);width:auto;transform:translate(calc(var(--mx,0px) * 0.9 + var(--dx,0px) + var(--hx,0px)),calc(var(--my,0px) * 0.9 + var(--dy,0px) + var(--hy,0px))) rotate(4.5deg) rotate(var(--hr,0deg))">
+        <img src="assets/logos/listerine.png" alt="Listerine" style="left:30%;top:48%;height:clamp(19px,2vw,28px);width:auto;transform:translate(calc(var(--mx,0px) * 1.6 + var(--dx,0px) + var(--hx,0px)),calc(var(--my,0px) * 1.6 + var(--dy,0px) + var(--hy,0px))) rotate(-8deg) rotate(var(--hr,0deg))">
+        <img src="assets/logos/ipsy.png" alt="IPSY" style="left:55%;top:44%;height:clamp(26px,2.8vw,38px);width:auto;transform:translate(calc(var(--mx,0px) * 0.5 + var(--dx,0px) + var(--hx,0px)),calc(var(--my,0px) * 0.5 + var(--dy,0px) + var(--hy,0px))) rotate(6deg) rotate(var(--hr,0deg))">
+        <img src="assets/logos/levoit.png" alt="Levoit" style="left:76%;top:53%;height:clamp(28px,3vw,42px);width:auto;transform:translate(calc(var(--mx,0px) * 1.1 + var(--dx,0px) + var(--hx,0px)),calc(var(--my,0px) * 1.1 + var(--dy,0px) + var(--hy,0px))) rotate(-4deg) rotate(var(--hr,0deg))">
+        <img src="assets/logos/popflex.png" alt="POPFLEX" style="left:11%;top:73%;height:clamp(28px,3vw,42px);width:auto;transform:translate(calc(var(--mx,0px) * 1.8 + var(--dx,0px) + var(--hx,0px)),calc(var(--my,0px) * 1.8 + var(--dy,0px) + var(--hy,0px))) rotate(7deg) rotate(var(--hr,0deg))">
+        <img src="assets/logos/culture-pop.png" alt="Culture Pop Soda" style="left:38%;top:68%;height:clamp(52px,5.5vw,74px);width:auto;transform:translate(calc(var(--mx,0px) * 0.8 + var(--dx,0px) + var(--hx,0px)),calc(var(--my,0px) * 0.8 + var(--dy,0px) + var(--hy,0px))) rotate(-6deg) rotate(var(--hr,0deg))">
+        <img src="assets/logos/cards-against-humanity.png" alt="Cards Against Humanity" style="left:66%;top:74%;height:clamp(46px,4.8vw,66px);width:auto;transform:translate(calc(var(--mx,0px) * 1.2 + var(--dx,0px) + var(--hx,0px)),calc(var(--my,0px) * 1.2 + var(--dy,0px) + var(--hy,0px))) rotate(5.5deg) rotate(var(--hr,0deg))">
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section id="about" style="padding:clamp(56px,7vw,104px) clamp(20px,4vw,56px);border-top:1px solid rgba(29,31,32,.1)">
+    <div style="max-width:1500px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(30px,5vw,68px);align-items:start">
+      <div class="nl-frame" style="aspect-ratio:4/5;max-width:440px"><img src="assets/about-photo.webp" alt="Natalie Lui" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
+          <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--nl-accent,#b0567f)">05 — About</span>
+          <h2 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(34px,4.6vw,58px);line-height:1;letter-spacing:-.01em;text-transform:uppercase">Nice to meet you</h2>
+        </div>
+        <p style="margin:0;font-size:17.5px;line-height:1.65;color:#2b2d2e;max-width:58ch;text-wrap:pretty">I'm Natalie, 26, based in New York. My background sits at the intersection of data, creativity, and community. I started my career as a business intelligence analyst at Jefferies, where I learned how to turn complex information into clear decisions. Outside of my 9-to-5, I built a completely different skill set by growing an audience of 200K+ as a creator and founding a social club from the ground up.</p>
+        <p style="margin:0;font-size:16px;line-height:1.7;color:#5d5f60;max-width:58ch;text-wrap:pretty">Being an analyst taught me to question what the numbers are actually saying, look for patterns, and build the dashboard before forming the opinion. Being a creator and founder taught me the other half. Numbers can tell you what happened, but understanding people tells you why. I've gotten good at moving between both, using data to make smarter decisions without losing the human instinct behind what actually resonates.</p>
+        <p style="margin:0;font-size:16px;line-height:1.7;color:#5d5f60;max-width:58ch;text-wrap:pretty">Now I'm looking for something where I don't have to choose between those two sides of my brain.</p>
+        <p style="margin:0;font-size:16px;line-height:1.7;color:#5d5f60;max-width:58ch;text-wrap:pretty">Outside of work: pottery, Pilates, hiking, traveling and an unreasonable number of restaurant recommendations.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;padding-top:6px">
+          <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#6d6f70">Skills &amp; tools</span>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="font-size:12px;padding:5px 12px;border:1px solid rgba(29,31,32,.16)">Marketing analytics</span>
+            <span style="font-size:12px;padding:5px 12px;border:1px solid rgba(29,31,32,.16)">Content strategy</span>
+            <span style="font-size:12px;padding:5px 12px;border:1px solid rgba(29,31,32,.16)">Brand partnerships</span>
+            <span style="font-size:12px;padding:5px 12px;border:1px solid rgba(29,31,32,.16)">Influencer marketing</span>
+            <span style="font-size:12px;padding:5px 12px;border:1px solid rgba(29,31,32,.16)">Social media marketing</span>
+            <span style="font-size:12px;padding:5px 12px;border:1px solid rgba(29,31,32,.16)">Event production</span>
+            <span style="font-size:12px;padding:5px 12px;border:1px solid rgba(29,31,32,.16)">Google Analytics</span>
+            <span style="font-size:12px;padding:5px 12px;border:1px solid rgba(29,31,32,.16)">Power BI</span>
+            <span style="font-size:12px;padding:5px 12px;border:1px solid rgba(29,31,32,.16)">SQL</span>
+            <span style="font-size:12px;padding:5px 12px;border:1px solid rgba(29,31,32,.16)">Excel / VBA</span>
+            <span style="font-size:12px;padding:5px 12px;border:1px solid rgba(29,31,32,.16)">Canva</span>
+            <span style="font-size:12px;padding:5px 12px;border:1px solid rgba(29,31,32,.16)">Figma</span>
+            <span style="font-size:12px;padding:5px 12px;border:1px solid rgba(29,31,32,.16)">CapCut</span>
+            <span style="font-size:12px;padding:5px 12px;border:1px solid rgba(29,31,32,.16)">Framer</span>
+            <span style="font-size:12px;padding:5px 12px;border:1px solid rgba(29,31,32,.16)">Squarespace</span>
+            <span style="font-size:12px;padding:5px 12px;border:1px solid rgba(29,31,32,.16)">Trello / Jira</span>
+          </div>
+          <p style="margin:6px 0 0;font-size:14px;line-height:1.6;color:#6d6f70">BS Finance, minor in Marketing — Rowan University, Rohrer College of Business (Cum Laude, Dean's List). UX/UI Designer Certification, DesignLab, 2025.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding:clamp(64px,8vw,116px) clamp(20px,4vw,56px);border-top:1px solid rgba(29,31,32,.1)">
+    <div style="max-width:1500px;margin:0 auto;display:flex;flex-direction:column;gap:26px;align-items:flex-start">
+      <span style="display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:7px 14px;border:1px solid rgba(29,31,32,.16);border-left:3px solid var(--nl-accent,#b0567f);color:var(--nl-accent-deep,#7c3557)">Open to full-time work immediately</span>
+      <h2 style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(38px,7vw,104px);line-height:.94;letter-spacing:-.02em;text-transform:uppercase;max-width:22ch">Let's talk about what we could build</h2>
+      <p style="margin:0;max-width:62ch;font-size:17px;line-height:1.65;color:#3c3e3f;text-wrap:pretty">I'm looking for growth marketing, brand and creative strategy, marketing coordination, or event coordination roles. If that's what you're hiring for, my resume is one click away.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:2px">
+        <a class="nl-frame" href="assets/Natalie_Lui_Resume.pdf" target="_blank" style="display:inline-flex;align-items:center;padding:16px 30px;font-family:var(--font-heading);font-size:15px;letter-spacing:.14em;text-transform:uppercase;background:#1d1f20;color:#fff;border-color:#1d1f20" style-hover="background:var(--nl-accent,#b0567f);border-color:var(--nl-accent,#b0567f)">Download resume
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </a>
+        <a class="nl-frame" href="mailto:natalievlui24@gmail.com" style="display:inline-flex;align-items:center;padding:16px 30px;font-family:var(--font-heading);font-size:15px;letter-spacing:.14em;text-transform:uppercase" style-hover="background:var(--nl-accent-tint,#f6e7ee)">Email me
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;width:100%;margin-top:clamp(20px,3vw,38px);padding-top:26px;border-top:1px solid rgba(29,31,32,.12)">
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6d6f70">Email</span><a class="nl-under" href="mailto:natalievlui24@gmail.com" style="font-size:16px">natalievlui24@gmail.com</a></div>
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6d6f70">Phone</span><a class="nl-under" href="tel:+16097318131" style="font-size:16px">609-731-8131</a></div>
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6d6f70">LinkedIn</span><a class="nl-under" href="https://linkedin.com/in/luinatalie/" target="_blank" style="font-size:16px">in/luinatalie</a></div>
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6d6f70">Based in</span><span style="font-size:16px">New York, NY</span></div>
+      </div>
+    </div>
+  </section>
+
+  <a class="nl-frame" href="#top" aria-label="Back to top" style="position:fixed;right:clamp(16px,2.4vw,32px);bottom:clamp(16px,2.4vw,32px);z-index:30;display:flex;align-items:center;gap:8px;padding:12px 16px;background:#fff;font-family:var(--font-heading);font-size:12px;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 3px 10px rgba(29,31,32,.12)" style-hover="background:#1d1f20;color:#fff;border-color:#1d1f20">↑ top
+    <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+  </a>
+
+  <footer style="padding:22px clamp(20px,4vw,56px);border-top:1px solid rgba(29,31,32,.1);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <span style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#6d6f70">Natalie Lui</span>
+    <span style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#6d6f70">© 2026</span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#b0567f&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#b0567f&quot;,&quot;#41591f&quot;,&quot;#1d1f20&quot;,&quot;#8a6a2f&quot;],&quot;section&quot;:&quot;Accents&quot;},&quot;secondAccent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#41591f&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#41591f&quot;,&quot;#b0567f&quot;,&quot;#2c455d&quot;],&quot;section&quot;:&quot;Accents&quot;},&quot;showReel&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;},&quot;showPartners&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() { this.applyAccents(); this.startTyping(); this.trackCursor(); this.startAuto(); this.setupVideo(); this.setupScatter(); this.setupReels(); }
+  setupScatter() {
+    const wrap = document.getElementById("nl-logo-scatter");
+    if (!wrap) return;
+    this.wrap = wrap;
+    this.drag = this.drag || {};
+    wrap.addEventListener("pointermove", e => {
+      if (this.dragging) return;
+      const r = wrap.getBoundingClientRect();
+      wrap.style.setProperty("--mx", (((e.clientX - r.left) / r.width - 0.5) * 30).toFixed(2) + "px");
+      wrap.style.setProperty("--my", (((e.clientY - r.top) / r.height - 0.5) * 20).toFixed(2) + "px");
+    });
+    wrap.addEventListener("pointerleave", () => {
+      wrap.style.setProperty("--mx", "0px");
+      wrap.style.setProperty("--my", "0px");
+    });
+    wrap.querySelectorAll("img").forEach((img, i) => {
+      const key = img.getAttribute("alt") || String(i);
+      const pull = ev => {
+        if (this.dragging) return;
+        const r = img.getBoundingClientRect();
+        const dx = ev.clientX - (r.left + r.width / 2);
+        const dy = ev.clientY - (r.top + r.height / 2);
+        const m = Math.max(r.width, r.height) / 2 || 1;
+        const k = Math.min(1, Math.hypot(dx, dy) / m);
+        const cap = 16;
+        img.style.setProperty("--hx", (dx / m * cap * (1 - k * 0.35)).toFixed(2) + "px");
+        img.style.setProperty("--hy", (dy / m * cap * (1 - k * 0.35)).toFixed(2) + "px");
+        img.style.setProperty("--hr", (dx / m * 1.6).toFixed(2) + "deg");
+      };
+      img.addEventListener("pointermove", pull);
+      img.addEventListener("pointerleave", () => {
+        img.style.setProperty("--hx", "0px");
+        img.style.setProperty("--hy", "0px");
+        img.style.setProperty("--hr", "0deg");
+      });
+      img.addEventListener("pointerdown", e => {
+        e.preventDefault();
+        const at = this.drag[key] || { x: 0, y: 0 };
+        const ox = e.clientX - at.x, oy = e.clientY - at.y;
+        this.dragging = true;
+        img.classList.add("nl-dragging");
+        const move = ev => { this.drag[key] = { x: ev.clientX - ox, y: ev.clientY - oy }; this.applyScatter(); };
+        const up = () => {
+          this.dragging = false;
+          img.classList.remove("nl-dragging");
+          img.removeEventListener("pointermove", move);
+          img.removeEventListener("pointerup", up);
+          img.removeEventListener("pointercancel", up);
+        };
+        try { img.setPointerCapture(e.pointerId); } catch (err) {}
+        img.addEventListener("pointermove", move);
+        img.addEventListener("pointerup", up);
+        img.addEventListener("pointercancel", up);
+      });
+    });
+    this.applyScatter();
+    this.startFloat();
+  }
+  startFloat() {
+    if (window.matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+    const imgs = Array.from(this.wrap.querySelectorAll("img"));
+    const seeds = imgs.map((_, i) => ({
+      ax: 5 + (i % 4) * 2.4, ay: 11 + (i % 5) * 3.1,
+      px: (i * 1.7) % 6.283, py: (i * 2.9) % 6.283,
+      sx: 0.00016 + (i % 3) * 0.00005, sy: 0.00021 + (i % 4) * 0.00004,
+      ar: 1.1 + (i % 3) * 0.5
+    }));
+    const tick = t => {
+      this.floatRAF = requestAnimationFrame(tick);
+      if (document.hidden || window.innerWidth <= 760) return;
+      imgs.forEach((img, i) => {
+        if (img.classList.contains("nl-dragging")) return;
+        const s = seeds[i];
+        const y = Math.sin(t * s.sy + s.py) * s.ay - s.ay * 0.35;
+        const x = Math.sin(t * s.sx + s.px) * s.ax;
+        img.style.translate = x.toFixed(2) + "px " + y.toFixed(2) + "px";
+        img.style.rotate = (Math.sin(t * s.sy * 0.8 + s.px) * s.ar).toFixed(2) + "deg";
+      });
+    };
+    this.floatRAF = requestAnimationFrame(tick);
+  }
+  applyScatter() {
+    if (!this.wrap) return;
+    this.wrap.querySelectorAll("img").forEach((img, i) => {
+      const p = this.drag[img.getAttribute("alt") || String(i)] || { x: 0, y: 0 };
+      img.style.setProperty("--dx", p.x + "px");
+      img.style.setProperty("--dy", p.y + "px");
+    });
+  }
+  trackCursor() {
+    let x = 0, y = 0, over = false, queued = false;
+    const paint = () => {
+      queued = false;
+      const dot = document.getElementById("nl-cursor");
+      if (!dot) return;
+      dot.style.opacity = "1";
+      dot.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
+      dot.style.width = over ? "26px" : "14px";
+      dot.style.height = over ? "26px" : "14px";
+    };
+    this.onMove = e => {
+      x = e.clientX;
+      y = e.clientY;
+      over = !!(e.target && e.target.closest && e.target.closest("a,button,[role=button]"));
+      if (!queued) { queued = true; requestAnimationFrame(paint); }
+    };
+    this.onLeave = () => {
+      const dot = document.getElementById("nl-cursor");
+      if (dot) dot.style.opacity = "0";
+    };
+    window.addEventListener("pointermove", this.onMove, { passive: true });
+    window.addEventListener("mousemove", this.onMove, { passive: true });
+    document.addEventListener("mouseleave", this.onLeave);
+  }
+  componentDidUpdate() { this.applyAccents(); this.applyScatter(); }
+  applyAccents() {
+    const a = this.props.accentColor ?? "#b0567f";
+    const b = this.props.secondAccent ?? "#41591f";
+    const r = document.documentElement.style;
+    r.setProperty("--nl-accent", a);
+    r.setProperty("--nl-accent-deep", `color-mix(in oklch, ${a} 78%, #1d1f20)`);
+    r.setProperty("--nl-accent-tint", `color-mix(in oklch, ${a} 14%, #fff)`);
+    r.setProperty("--nl-accent-2", b);
+    r.setProperty("--nl-accent-2-tint", `color-mix(in oklch, ${b} 14%, #fff)`);
+  }
+  state = { candid: 0, canva: 0, night: 0, phraseIndex: 0 };
+  phrases = [
+    "growth marketer in New York.",
+    "community builder.",
+    "creator with a 200K audience.",
+    "analyst who went into brand marketing."
+  ];
+  startTyping() {
+    this.timer = setInterval(() => {
+      this.setState(s => ({ phraseIndex: (s.phraseIndex + 1) % this.phrases.length }));
+    }, 2600);
+  }
+  legacyTyping() {
+    let p = 0, i = 0, deleting = false;
+    const tick = () => {
+      const full = this.phrases[p];
+      if (!deleting) {
+        i++;
+        this.setState({ typed: full.slice(0, i) });
+        if (i === full.length) { deleting = true; this.timer = setTimeout(tick, 2200); return; }
+        this.timer = setTimeout(tick, 46);
+      } else {
+        i--;
+        this.setState({ typed: full.slice(0, i) });
+        if (i === 0) { deleting = false; p = (p + 1) % this.phrases.length; this.timer = setTimeout(tick, 400); return; }
+        this.timer = setTimeout(tick, 22);
+      }
+    };
+    this.timer = setTimeout(tick, 500);
+  }
+  componentWillUnmount() {
+    if (this.floatRAF) cancelAnimationFrame(this.floatRAF);
+    clearTimeout(this.timer);
+    clearInterval(this.timer);
+    clearInterval(this.autoTimer);
+    window.removeEventListener("pointermove", this.onMove);
+    window.removeEventListener("mousemove", this.onMove);
+    document.removeEventListener("mouseleave", this.onLeave);
+  }
+  counts = { candid: 8, canva: 9, night: 5 };
+  swipes = {};
+  swipe(key) {
+    if (this.swipes[key]) return this.swipes[key];
+    const st = { x: null, y: null };
+    this.swipes[key] = {
+      onTouchStart: e => { const t = e.touches[0]; st.x = t.clientX; st.y = t.clientY; },
+      onTouchEnd: e => {
+        if (st.x === null) return;
+        const t = e.changedTouches[0];
+        const dx = t.clientX - st.x, dy = t.clientY - st.y;
+        st.x = null;
+        if (Math.abs(dx) > 44 && Math.abs(dx) > Math.abs(dy) * 1.4) this.step(key, dx < 0 ? 1 : -1);
+      }
+    };
+    return this.swipes[key];
+  }
+  setupReels() {
+    const vids = Array.from(document.querySelectorAll("video.nl-reel"));
+    if (!vids.length) return setTimeout(() => this.setupReels(), 300);
+    vids.forEach(v => {
+      v.muted = true; v.loop = true; v.playsInline = true;
+      v.setAttribute("playsinline", "");
+      v.addEventListener("click", () => {
+        if (v.muted) { vids.forEach(o => { if (o !== v) o.muted = true; }); v.muted = false; v.play().catch(() => {}); }
+        else { v.muted = true; }
+      });
+    });
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) e.target.play().catch(() => {});
+      else { e.target.pause(); e.target.muted = true; }
+    }), { threshold: 0.35 });
+    vids.forEach(v => io.observe(v));
+    this.reelIO = io;
+  }
+  setupVideo() {
+    const v = document.getElementById("nl-night-video");
+    if (!v) return setTimeout(() => this.setupVideo(), 300);
+    v.muted = true;
+    v.loop = true;
+    v.controls = true;
+    v.play().catch(() => {});
+  }
+  startAuto() {
+    this.autoTimer = setInterval(() => {
+      if (document.hidden) return;
+      this.setState(s => ({
+        candid: (s.candid + 1) % this.counts.candid,
+        canva: (s.canva + 1) % this.counts.canva,
+        night: (s.night + 1) % this.counts.night
+      }));
+    }, 6000);
+  }
+  step(key, dir) {
+    const n = this.counts[key] || 4;
+    this.setState(s => ({ [key]: (s[key] + dir + n) % n }));
+  }
+  renderVals() {
+    const { candid, canva } = this.state;
+    return {
+      showReel: this.props.showReel ?? true,
+      showPartners: this.props.showPartners ?? true,
+      phrase: this.phrases[this.state.phraseIndex],
+      phraseIndex: this.state.phraseIndex,
+      nightSwipeStart: this.swipe("night").onTouchStart,
+      nightSwipeEnd: this.swipe("night").onTouchEnd,
+      candidSwipeStart: this.swipe("candid").onTouchStart,
+      candidSwipeEnd: this.swipe("candid").onTouchEnd,
+      canvaSwipeStart: this.swipe("canva").onTouchStart,
+      canvaSwipeEnd: this.swipe("canva").onTouchEnd,
+      nightShift: `translateX(-${this.state.night * 100}%)`,
+      nightLabel: `${this.state.night + 1} / 5`,
+      nightPrev: () => this.step("night", -1),
+      nightNext: () => this.step("night", 1),
+      candidShift: `translateX(-${candid * 100}%)`,
+      canvaShift: `translateX(-${canva * 100}%)`,
+      candidLabel: `${candid + 1} / 8`,
+      canvaLabel: `${canva + 1} / 9`,
+      candidPrev: () => this.step("candid", -1),
+      candidNext: () => this.step("candid", 1),
+      canvaPrev: () => this.step("canva", -1),
+      canvaNext: () => this.step("canva", 1)
+    };
+  }
+}
+</script>
+</body>
+</html>
