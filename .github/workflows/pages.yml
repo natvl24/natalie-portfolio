@@ -25,6 +25,7 @@ jobs:
           cp -r gh-site/. _site/
           cp -r assets _site/assets
           touch _site/.nojekyll
+          ls -la _site
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
